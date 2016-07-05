@@ -1,6 +1,6 @@
 # Online-Judge
 
-This is a simple online jugde built for small scale usage. The judge is designed for C/C++, and can be easily adapted for any programming language.
+This is a simple and easy to use online jugde built for small scale usage. The judge is designed for C/C++, and can be easily adapted for any programming language.
 
 **Features**
 
