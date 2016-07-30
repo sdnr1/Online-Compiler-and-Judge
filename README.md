@@ -5,7 +5,7 @@ This is a simple and easy to use online jugde built for small scale usage. The j
 **Features**
 
 * Compiles code and executes it for a sample input.
-* Output generated can be compared with a sample output, so as to judge the program.
+* Allows user defined output validation software to be used to judge the ouptut of the program. The judge includes a default output checker, which compares the program generated output to a sample output.
 * Time limits can be imposed on the programs. The judge reports "Time Limit Exceeded" if program execution does not complete within provided time limit.
 * Capable reporting compilation and runtime errors verbosely.
 

@@ -7,6 +7,7 @@ $input_file = "input.txt"; // required
 $sample_output = "output.txt"; // required
 $output_file = "generated_output.txt";
 $program_execution_time_limit = 2000000; // time in microseconds
+$custom_output_validator = false; // should be true if a custom program for output validation purpose is being used
 
 // Check if cpp_code, input_file and sample_output exist
 if(!file_exists($cpp_code) || !file_exists($input_file) || !file_exists($sample_output))
@@ -87,9 +88,16 @@ if(file_exists($stderr_file) && filesize($stderr_file) != 0)
 }
 
 // Check generated output with sample output
-if(compareFiles($sample_output, $output_file))
-	echo "Correct Answer";
+if($custom_program_validator)
+{
+	// Run custom output validator here
+}
 else
-	echo "Wrong Answer";
+{
+	if(compareFiles($sample_output, $output_file))
+		echo "Correct Answer";
+	else
+		echo "Wrong Answer";
+}
 
 ?>
