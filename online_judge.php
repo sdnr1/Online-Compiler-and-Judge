@@ -53,21 +53,17 @@ if(!empty($str))
 pclose(popen("start /B ${program} < ${input_file} > ${output_file} 2> ${stderr_file}", "r"));
 usleep($program_execution_time_limit);
 
-// Check if Host OS in Windows
-if(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
-{
-	$str = exec("taskkill /F /IM ${program}.exe 2>&1");
-	$str = explode(":", $str)[0];
+$str = exec("taskkill /F /IM ${program}.exe 2>&1");
+$str = explode(":", $str)[0];
 
-	// Check if program exceeded time limit
-	if($str == "SUCCESS")
-	{
-		echo "Time Limit Exceeded";
-		exit;
-	}
-}
-else
+// Check if program exceeded time limit
+if($str == "SUCCESS")
 {
+	echo "Time Limit Exceeded";
+	exit;
+}
+
+/*
 	$str = exec("pgrep ${program}");
 	exec("kill ${str}");
 	
@@ -77,7 +73,7 @@ else
 		echo "Time Limit Exceeded";
 		exit;
 	}
-}
+*/
 
 // Check for runtime error
 if(file_exists($stderr_file) && filesize($stderr_file) != 0)
