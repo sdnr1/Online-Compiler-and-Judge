@@ -1,11 +1,12 @@
 # Online-Judge
 
-This is a simple and easy to use online jugde built for small scale usage. The judge is designed for C/C++, and can be easily adapted for any programming language.
+This is a simple and easy to use online compiler with output judging capabities. The judge is designed for C/C++, and can be easily adapted for any programming language.
 
 **Features**
 
-* Compiles code and executes it for a sample input.
-* Allows user defined output validation software to be used to judge the ouptut of the program. The judge includes a default output checker, which compares the program generated output to a sample output.
+* Compiles code and executes it for given input.
+* Displays program output.
+* Allows user defined output judging scripts to be used to judge the ouptut of the program. The judge includes a default output checker, which compares the program generated output to a sample output.
 * Time limits can be imposed on the programs. The judge reports "Time Limit Exceeded" if program execution does not complete within provided time limit.
 * Capable reporting compilation and runtime errors verbosely.
 
