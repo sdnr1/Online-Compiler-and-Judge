@@ -1,4 +1,4 @@
-# Online-Judge
+# Online-Compiler-and-Judge
 
 This is a simple and easy to use online compiler with output judging capabilities. The judge is designed for C/C++, and can be easily adapted for any programming language.
 
